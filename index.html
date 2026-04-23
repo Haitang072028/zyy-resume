@@ -1,0 +1,241 @@
+<!-- 版本 B：双栏头像布局 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>郑圆圆 | 个人简历</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="#" data-i18n="profile.name">郑圆圆</a>
+            </div>
+            <nav class="navbar-menu">
+                <a href="#education" data-i18n="nav.education">教育背景</a>
+                <a href="#projects" data-i18n="nav.projects">项目经历</a>
+                <a href="#skills" data-i18n="nav.skills">相关技能</a>
+                <a href="#honors" data-i18n="nav.honors">荣誉奖项</a>
+                <a href="#contact-section" data-i18n="nav.contact">联系方式</a>
+            </nav>
+            <div class="language-switch">
+                <button class="lang-btn active" data-lang="zh">中文</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区第一屏（Hero Section | 头像+技能区） -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <!-- 修改：交换左右位置，左图右文 -->
+                <div class="hero-left">
+                    <div class="avatar-rectangle">
+                        <!-- 替换为真实照片 -->
+                        <img src="证件照.jpg" alt="郑圆圆的照片">
+                        <!-- 删除头像下方状态文字 -->
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="status" data-i18n="hero.status">正在寻找机会. </div>
+                    <h1 data-i18n="profile.name">郑圆圆</h1>
+                    <p class="subtitle" data-i18n="profile.title">人工智能方向 · 控制科学与工程硕士（拟录取）</p>
+                    <!-- 移动中共党员信息到这里 -->
+                    <span class="party-badge" data-i18n="contact.party">中共党员</span>
+                    
+                    <div class="skills-section">
+                        <h3 data-i18n="skills.title">我的核心能力</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">YOLOv5</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">OpenPose</span>
+                            <span class="skill-tag">Pandas/NumPy</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">PyQt5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <!-- 修改：按钮文案改为“详细信息 ↓”，跳转至教育背景 -->
+                        <a href="#education" class="btn-primary" data-i18n="hero.details">详细信息 ↓</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 随后内容区 -->
+    <section class="main-content">
+        <!-- 教育背景卡片 -->
+        <div class="container">
+            <section id="education" class="card">
+                <h2 class="section-title" data-i18n="education.title">教育背景</h2>
+                <div class="education-content">
+                    <!-- 修改：本科部分 -->
+                    <div class="education-item">
+                        <h3 data-i18n="education.sdufe">山东财经大学</h3>
+                        <p class="degree" data-i18n="education.undergraduate">人工智能 本科</p>
+                        <p class="period">2021.09 - 2025.06</p>
+                        <div class="courses-section">
+                            <h4 data-i18n="education.courses">主修课程</h4>
+                            <div class="course-tags">
+                                <span class="course-tag">高等数学</span>
+                                <span class="course-tag">线性代数</span>
+                                <span class="course-tag">机器学习与模式识别</span>
+                                <span class="course-tag">神经网络与深度学习</span>
+                                <span class="course-tag">计算机视觉</span>
+                                <span class="course-tag">自然语言处理</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改：研究生部分 -->
+                    <div class="education-item">
+                        <h3 data-i18n="education.bucea">北京建筑大学</h3>
+                        <p class="degree" data-i18n="education.graduate">控制科学与工程 研究生（拟录取）</p>
+                        <p class="period" data-i18n="education.period">2026.09 入学</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 项目经历 -->
+            <section id="projects" class="card">
+                <h2 class="section-title" data-i18n="projects.title">项目经历</h2>
+                
+                <!-- 项目一 -->
+                <div class="project-item">
+                    <h3 data-i18n="project1.title">基于 YOLOv5 的垃圾分类算法研究</h3>
+                    <p class="project-role" data-i18n="project1.role">毕业设计 · 主要负责人</p>
+                    <p class="project-desc" data-i18n="project1.desc">针对垃圾分类中目标尺度差异大、遮挡频繁等问题改进 YOLOv5。</p>
+                    <h4 data-i18n="project1.workTitle">核心工作与成果：</h4>
+                    <ul class="project-details">
+                        <li data-i18n="project1.work1">引入 <span class="tech-tag">CBAM</span> 注意力机制，增强特征提取。</li>
+                        <li data-i18n="project1.work2">设计 <span class="tech-tag">Focal-CIoU</span> 联合损失函数，改善类别不均衡与定位偏差。</li>
+                        <li data-i18n="project1.work3">鲁棒性验证：亮度波动 ±8%、30% 噪声、局部遮挡下稳定。</li>
+                        <li data-i18n="project1.work4">基于 <span class="tech-tag">PyQt5</span> 开发垃圾分类检测系统，支持图片/视频流分析。</li>
+                    </ul>
+                    <a href="https://github.com/Haitang072028/yolov5-garbage-classification" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> <span data-i18n="project1.github">GitHub 链接</span>
+                    </a>
+                </div>
+                
+                <!-- 项目二 -->
+                <div class="project-item">
+                    <h3 data-i18n="project2.title">领感智体——多场景适用型体育智能化解决方案</h3>
+                    <p class="project-role" data-i18n="project2.role">国家级大创 · 重要成员</p>
+                    <p class="project-desc" data-i18n="project2.desc">基于计算机视觉与边缘计算的人体姿态捕捉与动作评估系统。</p>
+                    <h4 data-i18n="project2.workTitle">主要工作：</h4>
+                    <ul class="project-details">
+                        <li data-i18n="project2.work1">多 <span class="tech-tag">Kinect</span> 传感器空间标定与骨骼点坐标对齐。</li>
+                        <li data-i18n="project2.work2">调用 <span class="tech-tag">OpenPose</span> 提取骨骼点，以 MPJPE 指标与 Kinect 真值对比并微调。</li>
+                        <li data-i18n="project2.work3">姿态评估算法测试及标准库动作比对分析。</li>
+                    </ul>
+                </div>
+                
+                <!-- 项目三 -->
+                <div class="project-item">
+                    <h3 data-i18n="project3.title">车牌识别系统</h3>
+                    <p class="project-role" data-i18n="project3.role">课程设计 · 主要负责人</p>
+                    <p class="project-desc" data-i18n="project3.desc">完整车牌检测识别流程，应对光照、倾斜、模糊等真实场景。</p>
+                    <h4 data-i18n="project3.workTitle">主要工作：</h4>
+                    <ul class="project-details">
+                        <li data-i18n="project3.work1">颜色特征+边缘检测定位车牌，倾斜校正与预处理。</li>
+                        <li data-i18n="project3.work2">垂直投影法分割字符，<span class="tech-tag">OCR</span> 识别加规则后处理。</li>
+                        <li data-i18n="project3.work3">多光照多角度测试与失败案例分析。</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- 新增：相关技能板块 -->
+            <section id="skills" class="card">
+                <h2 class="section-title" data-i18n="skills.sectionTitle">相关技能</h2>
+                <div class="skills-container">
+                    <!-- 技术技能子区 -->
+                    <div class="skills-subsection">
+                        <h3 data-i18n="skills.techSkills">技术技能</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">YOLOv5</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">OpenPose</span>
+                            <span class="skill-tag">Pandas / NumPy</span>
+                            <span class="skill-tag">Matplotlib / Seaborn</span>
+                            <span class="skill-tag">PyQt5</span>
+                            <span class="skill-tag" data-i18n="skills.dataStructures">数据结构与算法</span>
+                            <span class="skill-tag" data-i18n="skills.mlDl">机器学习 / 深度学习</span>
+                        </div>
+                    </div>
+                    <!-- 语言能力子区 -->
+                    <div class="skills-subsection">
+                        <h3 data-i18n="skills.languageSkills">语言能力</h3>
+                        <div class="language-content">
+                            <div class="language-item">
+                                <i class="fas fa-language"></i>
+                                <span data-i18n="language.english">英语 CET-6 / CET-4</span>
+                            </div>
+                            <div class="language-item">
+                                <i class="fas fa-comment"></i>
+                                <span data-i18n="language.mandarin">普通话二级甲等</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 荣誉奖项 -->
+            <section id="honors" class="card">
+                <h2 class="section-title" data-i18n="honors.title">荣誉奖项</h2>
+                <div class="honors-content">
+                    <div class="honor-item">
+                        <i class="fas fa-award"></i>
+                        <span data-i18n="honors.item1">国家级大学生创新创业训练项目 结项</span>
+                    </div>
+                    <div class="honor-item">
+                        <i class="fas fa-award"></i>
+                        <span data-i18n="honors.item2">国家励志奖学金（三次）</span>
+                    </div>
+                    <div class="honor-item">
+                        <i class="fas fa-award"></i>
+                        <span data-i18n="honors.item3">山东财经大学二等奖学金（四次）</span>
+                    </div>
+                    <div class="honor-item">
+                        <i class="fas fa-award"></i>
+                        <span data-i18n="honors.item4">山东财经大学"三千计划"优秀团队（团队负责人）</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 联系方式区块 -->
+            <section id="contact-section" class="card contact-section">
+                <h2 class="section-title" data-i18n="contactSection.title">联系方式</h2>
+                <div class="contact-content">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>13023007303</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>zyy2334059596@163.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Haitang072028" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
